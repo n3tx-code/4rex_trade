@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 17 Octobre 2018 à 16:33
+-- Généré le :  Mer 17 Octobre 2018 à 19:53
 -- Version du serveur :  5.7.14
 -- Version de PHP :  7.0.10
 
@@ -175,7 +175,13 @@ INSERT INTO `trade` (`ID`, `Paire`, `Trade_type`, `resultat`) VALUES
 (71, 'AUDCHF', 'Sell', 2.62),
 (72, 'USDJPY', 'Sell', -1.15),
 (73, 'NZDJPY', 'Sell', -1.16),
-(74, 'EURCAD', 'Sell', -0.2);
+(74, 'EURCAD', 'Sell', -0.2),
+(75, 'GBPAUD', 'Buy', 17.65),
+(76, 'AUDJPY', 'Sell', 24.27),
+(77, 'EURCAD', 'Buy', 19.14),
+(78, 'CADCHF', 'Sell', 14.2),
+(79, 'GBPCAD', 'Buy', 6.65),
+(80, 'CHFJPY', 'Sell', 6.09);
 
 --
 -- Index pour les tables exportées
@@ -201,7 +207,7 @@ ALTER TABLE `trade`
 -- AUTO_INCREMENT pour la table `trade`
 --
 ALTER TABLE `trade`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
