@@ -56,6 +56,12 @@
             $profit_buy += $buy;
         }
         $data[$paire]['profit_buy'] = $profit_buy;
+
+        // nbr trade
+        $req_nbr_trade = $bdd->prepare('SELECT COUNT(resultat) as total FROM trade WHERE Paire = ?');
+        $req_nbr_trade->execute(array($paire));
+        $nbr_trade = $req_nbr_trade->fetch()['total'];
+        $data[$paire]['nbr_trade'] = $nbr_trade;
     }
 
     // max profit
@@ -124,6 +130,7 @@
                 <th onclick="sortTable(3)">Type le plus utilisé (profitable)</th>
                 <th onclick="sortTable_num(4)">Profit Sell</th>
                 <th onclick="sortTable_num(5)">Profit Buy</th>
+                <th onclick="sortTable_num(6)">Nbr Trade</th>
             </tr>
             </thead>
             <tbody id="myTable">
@@ -184,6 +191,7 @@
                     <td><?= $type_profit ?></td>
                     <td><?= $paire_data['profit_sell'] ?></td>
                     <td><?= $paire_data['profit_buy'] ?></td>
+                    <td><?= $paire_data['nbr_trade'] ?></td>
                 </tr>
                 <?php
                     }
