@@ -26,7 +26,7 @@ if(
                 <label for="paire">Select list:</label>
                 <select class="form-control" id="paire" name="paire">
                     <?php
-                        $req_all_paire = $bdd->query('SELECT * FROM PAIRE');
+                        $req_all_paire = $bdd->query('SELECT * FROM paire');
                         while($paire = $req_all_paire->fetch())
                         {
                             ?>

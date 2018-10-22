@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 17 Octobre 2018 à 19:53
+-- Généré le :  Lun 22 Octobre 2018 à 10:12
 -- Version du serveur :  5.7.14
 -- Version de PHP :  7.0.10
 
@@ -181,7 +181,39 @@ INSERT INTO `trade` (`ID`, `Paire`, `Trade_type`, `resultat`) VALUES
 (77, 'EURCAD', 'Buy', 19.14),
 (78, 'CADCHF', 'Sell', 14.2),
 (79, 'GBPCAD', 'Buy', 6.65),
-(80, 'CHFJPY', 'Sell', 6.09);
+(80, 'CHFJPY', 'Sell', 6.09),
+(81, 'EURGBP', 'Sell', -16.66),
+(82, 'CHFJPY', 'Sell', -11.08),
+(83, 'CADCHF', 'Buy', -13.73),
+(84, 'EURCHF', 'Buy', 24.91),
+(85, 'GBPAUD', 'Sell', -9.89),
+(86, 'GBPNZD', 'Sell', -1.07),
+(87, 'NZDUSD', 'Sell', 0.09),
+(88, 'USDCHF', 'Buy', -13.07),
+(89, 'AUDCHF', 'Sell', 19.1),
+(90, 'CHFJPY', 'Sell', -10.45),
+(91, 'AUDNZD', 'Sell', -8.16),
+(92, 'USDSGD', 'Sell', 2.13),
+(93, 'AUDCAD', 'Buy', 1.59),
+(94, 'NZDUSD', 'Buy', 0.08),
+(95, 'XAUUSD', 'Sell', -12.92),
+(96, 'NZDCAD', 'Buy', -13.16),
+(97, 'GBPNZD', 'Buy', -9.5),
+(98, 'EURNOK', 'Sell', -1.48),
+(99, 'CHFJPY', 'Buy', -12.22),
+(100, 'USDZAR', 'Sell', 11.28),
+(101, 'AUDCHF', 'Sell', -12.89),
+(102, 'EURNOK', 'Sell', 13.09),
+(103, 'AUDCAD', 'Sell', -9.52),
+(104, 'EURPLN', 'Sell', -3.47),
+(105, 'EURZAR', 'Sell', -12.45),
+(106, 'CHFJPY', 'Sell', 0.54),
+(107, 'CADJPY', 'Sell', 3.7),
+(108, 'EURPLN', 'Sell', -19.41),
+(109, 'CADJPY', 'Sell', 9.04),
+(110, 'GBPCHF', 'Sell', -13.88),
+(111, 'GBPUSD', 'Sell', -13.05),
+(112, 'EURPLN', 'Sell', -3.54);
 
 --
 -- Index pour les tables exportées
@@ -207,7 +239,7 @@ ALTER TABLE `trade`
 -- AUTO_INCREMENT pour la table `trade`
 --
 ALTER TABLE `trade`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

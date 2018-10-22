@@ -69,8 +69,6 @@
     $sum_profit = $req_sum_profit->fetch()['total'];
 
 
-
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -137,19 +135,29 @@
             <?php
                 foreach($data as $paire_data)
                 {
-
                     // color of row depend of total profit
                     $color_row = "";
                     if($paire_data['profit_total'] > 0)
                     {
-                        $opacity = $paire_data['profit_total'] / $sum_profit;
+                        if(abs($sum_profit) < 1)
+                        {
+                            $sum_profit = abs($sum_profit) * 50;
+                        }
+                        $opacity = $paire_data['profit_total'] / abs($sum_profit);
                         $color_row = "rgba(0, 255, 0, ". $opacity .")";
                     }
                     elseif($paire_data['profit_total'] < 0)
                     {
-                        $opacity = abs($paire_data['profit_total']) / $sum_profit;
+                        if(abs($sum_profit) < 1)
+                        {
+                            $sum_profit = abs($sum_profit) * 50;
+                        }
+                        $opacity = abs($paire_data['profit_total']) / abs($sum_profit);
                         $color_row = "rgba(255, 0, 0, ". $opacity .")";
                     }
+
+
+
             ?>
 
                 <tr style="background-color: <?= $color_row ?> ">
