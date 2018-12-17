@@ -117,6 +117,8 @@
             }
             ?>
             <h5>Profit Buy : <span style="color: <?= $color_profit_buy ?>"><?= round($profit_buy, 2) ?></span></h5>
+			<a href=add_paire.php"><button class="btn btn-default">Ajout paire</button></a>
+			<a href="trade.php" style="color: white"><button class="btn btn-primary">Ajout trade</button></a>
         </div>
         <div class="col-md-9">
             <table class="table">
@@ -141,7 +143,7 @@
                     {
                         if(abs($sum_profit) < 1)
                         {
-                            $sum_profit = abs($sum_profit) * 50;
+                            $sum_profit = abs($sum_profit) * 100;
                         }
                         $opacity = $paire_data['profit_total'] / abs($sum_profit);
                         $color_row = "rgba(0, 255, 0, ". $opacity .")";
@@ -150,7 +152,7 @@
                     {
                         if(abs($sum_profit) < 1)
                         {
-                            $sum_profit = abs($sum_profit) * 50;
+                            $sum_profit = abs($sum_profit) * 100;
                         }
                         $opacity = abs($paire_data['profit_total']) / abs($sum_profit);
                         $color_row = "rgba(255, 0, 0, ". $opacity .")";
@@ -208,8 +210,20 @@
             </table>
         </div>
     </div>
+    <div class="row">
+        <ul class="list-group">
+            <?php
+            $req_last_trade = $bdd->query('SELECT * FROM trade ORDER BY ID DESC LIMIT 5');
+            while($trade = $req_last_trade->fetch())
+            {
+                ?>
+                <li class="list-group-item" style="color : <?php if(floatval($trade['resultat']) > 0) echo "#4286f4"; else echo "#f4414a"?>"><?= $trade['Paire'] ?>(<?= $trade['Trade_type'] ?>) : <?= $trade['resultat'] ?></li>
+                <?php
+            }
+            ?>
+        </ul>
+    </div>
 </div>
-<!-- todo : stat pour sell et pour buy -->
 <script src="js/sort_table.js">
 </script>
 </body>
